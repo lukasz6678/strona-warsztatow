@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galeria zdjęć</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <a href="index.html" id="logo"
+          ><img id="logo" src="images/logo.png" alt="logo"
+        /></a>
+        <ul class="navigation">
+          <li>
+            <a href="index.html">Strona główna</a>
+          </li>
+          <li>
+            <a href="o nas.html">O nas</a>
+          </li>
+          <li>
+            <a href="Lutomiersk 2023.html">Lutomiersk 2023</a>
+          </li>
+          <li class="selected">
+            <a href="galeria_zdjec.html">Galeria zdjęć</a>
+          </li>
+          <li>
+            <a href="kontakt.html">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+      <div class="body">
+        <div class="violin">
+          <div class="content">
+            <style>
+              * {box-sizing: border-box}
+              body {font-family: Verdana, sans-serif; margin:0}
+              .mySlides {display: none}
+              img_slider {vertical-align: middle;}
+              
+              /* Slideshow container */
+              .slideshow-container {
+                max-width: 500px;
+                position: relative;
+                margin: 20px;
+              }
+              
+              /* Next & previous buttons */
+              .prev, .next {
+                cursor: pointer;
+                position: relative;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+              }
+              
+              /* Position the "next button" to the right */
+              .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
+              }
+              
+              /* On hover, add a black background color with a little bit see-through */
+              .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+              }
+              
+              
+              /* The dots/bullets/indicators */
+              .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+              }
+              
+              .active, .dot:hover {
+                background-color: #717171;
+              }
+              
+              /* Fading animation */
+              .fade {
+                animation-name: fade;
+                animation-duration: 1.5s;
+              }
+              
+              @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+              }
+              
+              /* On smaller screens, decrease text size */
+              @media only screen and (max-width: 300px) {
+                .prev, .next,.text {font-size: 11px}
+              }
+              </style>
+              <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <img class=img_slider src="zdjecia grupowe/dzieci.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class=img_slide src="zdjecia grupowe/dzieci2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img class=img_slide src="zdjecia grupowe/dzieci3.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+                
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    //po ostatnim daj 1 slajd
+                  if (n < 1) {slideIndex = slides.length} //powrót na ostani slajd
+                  for (i = 0; i < slides.length; i++) { //stary slajd znika po zmianie na kolejny
+                    slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) { //kropki pod sliderem 
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  //wyświetla slider
+                  dots[slideIndex-1].className += " active"; //aktywuje zmienne kropki
+                }
+                </script>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="about">
+          <h3>O nas</h3>
+          <div>
+            <a href="o nas.html"
+              ><img src="zdjecia kadry/mama3.jpg" alt=""
+            /></a>
+            <p>
+              Pozostajemy do Państwa Dyspozycji i czekamy na Państwa pytania.
+            </p>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Kontakt</h3>
+          <ul>
+            <li>
+              <span>Anna Bralewska</span>
+              <p>
+                Nauczyciel gry na skrzypcach Metodą Suzuki (5), wieloletni
+                organizator Warszatatów Dzieci Suzuki
+              </p>
+            </li>
+            <li>
+              <span>Email:</span>
+              <p>
+                <a href="mailto: bralewska.anna@gmail.com"
+                  >bralewska.anna@gmail.com</a
+                >
+              </p>
+            </li>
+            <li>
+              <span>Tel:</span>
+              <p><a href="tel:508364917">508 364 917</a></p>
+            </li>
+          </ul>
+        </div>
+        <p class="footnote">
+          &#169; Copyright 2023 by Łukasz Różyło. All rights reserved
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
