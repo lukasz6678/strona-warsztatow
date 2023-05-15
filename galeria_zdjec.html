@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>Galeria zdjęć</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
+   
   </head>
   <body>
     <div class="page">
@@ -32,135 +33,85 @@
       </div>
       <div class="body">
         <div class="violin">
-          <div class="content">
-            <style>
-              * {box-sizing: border-box}
-              body {font-family: Verdana, sans-serif; margin:0}
-              .mySlides {display: none}
-              img_slider {vertical-align: middle;}
-              
-              /* Slideshow container */
-              .slideshow-container {
-                max-width: 500px;
-                position: relative;
-                margin: 20px;
-              }
-              
-              /* Next & previous buttons */
-              .prev, .next {
-                cursor: pointer;
-                position: relative;
-                top: 50%;
-                width: auto;
-                padding: 16px;
-                margin-top: -22px;
-                color: black
-                font-weight: bold;
-                font-size: 18px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-              }
-              
-              /* Position the "next button" to the right */
-              .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-              }
-              
-              /* On hover, add a black background color with a little bit see-through */
-              .prev:hover, .next:hover {
-                background-color: rgba(0,0,0,0.8);
-              }
-              
-              
-              /* The dots/bullets/indicators */
-              .dot {
-                cursor: pointer;
-                height: 15px;
-                width: 15px;
-                margin: 0 2px;
-                background-color: #bbb;
-                border-radius: 50%;
-                display: inline-block;
-                transition: background-color 0.6s ease;
-              }
-              
-              .active, .dot:hover {
-                background-color: #717171;
-              }
-              
-              /* Fading animation */
-              .fade {
-                animation-name: fade;
-                animation-duration: 1.5s;
-              }
-              
-              @keyframes fade {
-                from {opacity: .4} 
-                to {opacity: 1}
-              }
-              
-              /* On smaller screens, decrease text size */
-              @media only screen and (max-width: 300px) {
-                .prev, .next,.text {font-size: 11px}
-              }
-              </style>
-              <div class="slideshow-container">
-
-                <div class="mySlides fade">
-                  <img class=img_slider src="zdjecia grupowe/dzieci.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img class=img_slide src="zdjecia grupowe/dzieci2.jpg" style="width:100%">
-                </div>
-                
-                <div class="mySlides fade">
-                  <img class=img_slide src="zdjecia grupowe/dzieci3.jpg" style="width:100%">
-                </div>
-                
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-                
-                </div>
-                <br>
-                
-                <div style="text-align:center">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                </div>
-                
-                <script>
-                let slideIndex = 1;
-                showSlides(slideIndex);
-                
-                function plusSlides(n) {
-                  showSlides(slideIndex += n);
-                }
-                
-                function currentSlide(n) {
-                  showSlides(slideIndex = n);
-                }
-                
-                function showSlides(n) {
-                  let i;
-                  let slides = document.getElementsByClassName("mySlides");
-                  let dots = document.getElementsByClassName("dot");
-                  if (n > slides.length) {slideIndex = 1}    //po ostatnim daj 1 slajd
-                  if (n < 1) {slideIndex = slides.length} //powrót na ostani slajd
-                  for (i = 0; i < slides.length; i++) { //stary slajd znika po zmianie na kolejny
-                    slides[i].style.display = "none";  
-                  }
-                  for (i = 0; i < dots.length; i++) { //kropki pod sliderem 
-                    dots[i].className = dots[i].className.replace(" active", "");
-                  }
-                  slides[slideIndex-1].style.display = "block";  //wyświetla slider
-                  dots[slideIndex-1].className += " active"; //aktywuje zmienne kropki
-                }
-                </script>
-        </div>
+          <div class="images-slideshow">
+            <div class="imageSlides fade">
+                <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_1107.JPG">
+            </div>
+            <div class="imageSlides fade">
+                <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_1053.JPG">
+            </div>
+            <div class="imageSlides fade">
+                <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_1020.JPG">
+            </div>
+            <div class="imageSlides fade">
+              <img class='slider'src="./zdjecia grupowe/dzieci.jpg">
+            </div>
+            <div class="imageSlides fade">
+            <img class='slider'src="./zdjecia grupowe/dzieci1.jpg">
+            </div>
+            <div class="imageSlides fade">
+           <img class='slider'src="./zdjecia grupowe/dzieci2.jpg">
+      </div>
+      <div class="imageSlides fade">
+        <img class='slider'src="./zdjecia grupowe/dzieci3.jpg">
+    </div>
+    <div class="imageSlides fade">
+      <img class='slider'src="./zdjecia grupowe/rytmika.jpg">
+  </div>
+  <div class="imageSlides fade">
+    <img class='slider'src="./zdjecia grupowe/pawel panasiuk.jpg">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0779.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0837.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0767.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0772.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0773.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0775.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0808.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_1107.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0808.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0829.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0834.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0835.JPG">
+</div>
+<div class="imageSlides fade">
+ <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0840.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/Strona Suzuki/IMG_0842.JPG">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_2518.jpg">
+</div>
+<div class="imageSlides fade">
+  <img class='slider'src="zdjecia Karwaccy/2020.01 Suzuki Uniejow/IMG_2518.jpg">
+</div>
+            <a class="slider-btn previous" onclick="setSlides(-1)">❮</a>
+            <a class="slider-btn next" onclick="setSlides(1)">❯</a>
+    </div>
       </div>
       <div class="footer">
         <div class="about">
@@ -203,5 +154,6 @@
         </p>
       </div>
     </div>
+    <script src="slider.js"></script>
   </body>
 </html>
